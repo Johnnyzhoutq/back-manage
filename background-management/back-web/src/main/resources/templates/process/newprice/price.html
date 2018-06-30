@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org"
+	xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<link href="/ruoyi/css/RuoYi.css" th:href="@{/ruoyi/css/RuoYi.css}" rel="stylesheet"/>
+<link href="/ruoyi/css/newprice/fullcalendar.css" th:href="@{/ruoyi/css/newprice/fullcalendar.css}" rel="stylesheet"/>
+<link href="/ruoyi/css/newprice/fullcalendar.print.css" th:href="@{/ruoyi/css/newprice/fullcalendar.print.css}" rel="stylesheet"/>
+<link href="/ajax/libs/jquery-layout/jquery.layout-latest.css" th:href="@{/ajax/libs/jquery-layout/jquery.layout-latest.css}" rel="stylesheet"/>
+<link href="/ajax/libs/jquery-ztree/3.5/css/metro/zTreeStyle.css" th:href="@{/ajax/libs/jquery-ztree/3.5/css/metro/zTreeStyle.css}" rel="stylesheet"/>
+ 
+<body class="white-bg">
+
+<div class="wrapper wrapper-content ui-layout-center">
+        <div class="row animated fadeInDown">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>牌价展示</h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                       
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div id="calendar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	<div th:include="include :: footer"></div>
+    <script src="/ruoyi/process/newprice/newprice.js" th:src="@{/ruoyi/process/newprice/newprice.js}"></script>
+	<script src="/ruoyi/process/newprice/fullcalendar.min.js" th:src="@{/ruoyi/process/newprice/fullcalendar.min.js}"></script>
+	<script src="/ajax/libs/jquery-layout/jquery.layout-latest.js" th:src="@{/ajax/libs/jquery-layout/jquery.layout-latest.js}"></script>
+	<script src="/ajax/libs/jquery-ztree/3.5/js/jquery.ztree.all-3.5.js" th:src="@{/ajax/libs/jquery-ztree/3.5/js/jquery.ztree.all-3.5.js}"></script>
+   
+</body>
+</html>

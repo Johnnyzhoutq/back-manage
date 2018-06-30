@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" >
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<link href="/ajax/libs/iCheck/custom.css" th:href="@{/ajax/libs/iCheck/custom.css}" rel="stylesheet"/>
+<link href="/ajax/libs/select/select2.css" th:href="@{/ajax/libs/select/select2.css}" rel="stylesheet"/>
+<link href="/ruoyi/css/RuoYi.css" th:href="@{/ruoyi/css/RuoYi.css}" rel="stylesheet"/>
+<body class="white-bg">
+	<div class="wrapper wrapper-content ui-layout-center">
+        <input type="hidden" id="currentUserId" th:value="${currentUserId}">
+        <input type="hidden" id="logType" value="13">
+		<table class="bootstrap-table-child" data-mobile-responsive="true" 
+			   data-sort-name="create_time" data-sort-order="desc">
+		</table>
+	</div>
+	<div th:include="include::footer"></div>
+	<script src="/ruoyi/process/log/search.js" th:src="@{/ruoyi/process/log/search.js}"></script>
+	<script src="/ajax/libs/iCheck/icheck.min.js" th:src="@{/ajax/libs/iCheck/icheck.min.js}"></script>
+	<script src="/ajax/libs/select/select2.js" th:src="@{/ajax/libs/select/select2.js}"></script>
+	<script>
+        $(document).ready(function(){$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})});
+    </script>
+</body>
+</html>

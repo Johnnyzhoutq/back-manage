@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html  lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--360浏览器优先以webkit内核解析-->
+    <title>后台管理系统</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link href="../static/css/font-awesome.min.css" th:href="@{/css/font-awesome.css}" rel="stylesheet"/>
+    <link href="../static/css/main/animate.min.css" th:href="@{/css/main/animate.min.css}" rel="stylesheet"/>
+    <link href="../static/css/main/style.min862f.css" th:href="@{/css/main/style.min862f.css}" rel="stylesheet"/>
+</head>
+
+<body class="gray-bg">
+<div class="row  border-bottom white-bg dashboard-header">
+    <div class="wrapper wrapper-content">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <span class="label label-primary pull-right">全部</span>
+                        <h5>用户数量 </h5>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins" th:text="${userAmount}">
+                            <!--<input class="form-control" type="text" name="userName" id="userName" readonly="falsed" th:value="${userAmount}">-->
+                        </h1>
+                        <!--<div class="stat-percent font-bold text-navy">20% <i class="fa fa-level-up"></i>
+                        </div>
+                        <small>新订单</small>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <span class="label label-primary pull-right">全部</span>
+                        <h5>锁仓总额</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins" th:text="${totalAmountLocks}">
+                            <!--<div class="stat-percent font-bold text-info">40% <i class="fa fa-level-up"></i>
+                            </div>
+                            <small>新订单</small>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <span class="label label-info pull-right">今天</span>
+                        <h5>锁仓订单量</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins" th:text="${lockOrders}">
+                            <!-- <div class="stat-percent font-bold text-warning">16% <i class="fa fa-level-up"></i>
+                             </div>
+                             <small>新订单</small>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <span class="label label-info pull-right">今天</span>
+                        <h5>锁仓总额</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins" th:text="${todayAmountLocks}">
+                            <!--<div class="stat-percent font-bold text-info">40% <i class="fa fa-level-up"></i>
+                            </div>
+                            <small>新订单</small>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <span class="label label-info pull-right">今天</span>
+                        <h5>增加用户数</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins" th:text="${increaseNumberUsers}">
+                            <!-- <div class="stat-percent font-bold text-navy">20% <i class="fa fa-level-up"></i>
+                             </div>
+                             <small>新订单</small>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <span class="label label-info pull-right">今天</span>
+                        <h5>提现总额</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins" th:text="${totalToday}">
+                            <!-- <div class="stat-percent font-bold text-warning">16% <i class="fa fa-level-up"></i>
+                             </div>
+                             <small>新订单</small>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+<script src="../static/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
+<script src="../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.manage.project.business.dao.MarkPriceMapper">
+
+	<resultMap type="MarkPrice" id="MarkPriceResult">
+		<id     property="markpriceId"       column="markprice_id"      />
+		<result property="markPrice"       column="mark_price"      />
+		<result property="markPriceTime"    column="mark_price_time"   />
+		<result property="operDate"     column="oper_date"    />
+		<result property="operUser"        column="oper_user"        />
+	</resultMap>
+	
+	
+ 	<insert id="insertMarkPrice" parameterType="MarkPrice" useGeneratedKeys="true" keyProperty="markpriceId">
+ 		insert into business_mark_price(
+ 			<if test="markpriceId != null and markpriceId != 0">markprice_id,</if>
+ 			<if test="markPrice != null and markPrice != 0">mark_price,</if>
+ 			<if test="markPriceTime != null and markPriceTime != ''">mark_price_time,</if>
+ 			<if test="operUser != null and operUser != ''">oper_user,</if>
+ 			oper_date
+ 		)values(
+ 			<if test="markpriceId != null and markpriceId != ''">#{markpriceId},</if>
+ 			<if test="markPrice != null and markPrice != ''">#{markPrice},</if>
+ 			<if test="markPriceTime != null and markPriceTime != ''">#{markPriceTime},</if>
+ 			<if test="operUser != null and operUser != ''">#{operUser},</if>
+ 			sysdate()
+ 		)
+	</insert>
+	
+	<select id="selectAllMarkPrice" parameterType="MarkPrice" resultMap="MarkPriceResult">
+		select p.markprice_id, p.mark_price, p.mark_price_time, p.oper_date, p.oper_user from business_mark_price p
+		where 1=1
+	</select>
+
+	
+	<select id="selectMarkPriceBySelectDate" parameterType="String" resultMap="MarkPriceResult">
+		select  p.markprice_id, p.mark_price, p.mark_price_time, p.oper_date, p.oper_user from business_mark_price p
+		where   p.mark_price_time = #{markPriceTime}
+	</select>
+	
+	
+	<update id="updateMarkPriceBySelectDate" parameterType="MarkPrice">
+ 		update business_mark_price p
+ 		<set>
+ 			<if test="markPrice != null and markPrice != 0">p.mark_price = #{markPrice},</if>
+ 			oper_date = sysdate()
+ 		</set>
+ 		where 1=1
+ 		<if test="markpriceId != null and markpriceId  != ''">and p.markprice_id = #{markpriceId}</if>
+	</update>
+	
+</mapper> 

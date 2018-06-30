@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content">
+                        
+                        <div class="hr-line-dashed"></div>
+                        <div class="search-result">
+							<h3>
+							<a href="#">简写：NFT</a>
+							<a href="#" style= "padding-left:40px;">总量：1亿枚</a>
+							<a href="#" style= "padding-left:40px;">私募：1000万枚</a>
+							<a href="#" style= "padding-left:40px;">技术：ERC20</a>
+							<a href="#" style= "padding-left:40px;">发行方式：去中心化，恒量发行</a>
+							</h3>
+							</br>
+							<h2><a href="#" style= "padding-left:700px;">NFT市场模式</a></h2>
+							
+							
+							<h4><a href="#">一、币值的增长（单边上扬，只涨不跌）</a></h3>
+							&nbsp;&nbsp;5元1币，每销售5万枚涨1毛钱，总量50万枚</br>
+							&nbsp;&nbsp;6元1币，每销售10万枚涨1毛钱，总量100万枚 </br>
+							&nbsp;&nbsp;7元1币，每销售15万枚涨1毛钱，总量150万枚</br>
+							&nbsp;&nbsp;8元1币，每销售20万枚涨1毛钱，总量200万枚 </br>
+							&nbsp;&nbsp;9元1币，每销售30万枚涨1毛钱，总量300万枚</br></br>
+							<h4><a href="#">二、智能算力，采用以太坊的PoS智能合约算法，持币产生利息，日复利，每天币生币。</a></h3>
+							 &nbsp;&nbsp;100 ～999 0.20%/日 【1星】</br>
+							&nbsp;&nbsp;1000～1999 0.25%/日 【2星】</br>
+							 &nbsp;&nbsp;2000～2999 0.30%/日 【3星】</br>
+							  &nbsp;&nbsp;3000～4999 0.35%/日【4星】 </br>
+							  &nbsp;&nbsp;5000以上 0.40%/日 【5星】 </br>
+							  &nbsp;&nbsp;【智能】
+							&nbsp;&nbsp;纯投资按每天存量2%(递减释放)释放到零钱包里（可用算力钱包），每个币都可转存复利获得收益（系统默认自动转存）！</br>
+							&nbsp;&nbsp;举例:存入5000币为例，每天释放（递减）100币（2%），算力产生20币，每天产生的币可以参与复投存入智能算力钱包复利产币。</br>
+							&nbsp;&nbsp;注：每天锁仓静态释放2%和每天算力出来的币都显示在零钱包（可用算力钱包）  （2%是固定的，按照锁仓部分） </br></br>
+							<h4><a href="#">三、分享算力</a></h3>
+							&nbsp;&nbsp;1、直接推荐：10%，按照锁仓总量计算10%。举例：A存入1000币，A推荐了B，B存币1000，A一次性获得1000币的10%，即100个币，显示在零钱包（可用算力钱包）。</br>
+							&nbsp;&nbsp;(1)&nbsp; 例子中A拿到100个币，和A存的1000个币没啥关系吧？ 没关系</br>
+							&nbsp;&nbsp;(2)&nbsp; 如果B又存了2000个，那么A还能继续拿到10%的奖励200个吗？ 能</br>
+							&nbsp;&nbsp;(3)&nbsp; 如果B存进来的币，一天之后就转出去，A也能拿到10%的奖励吗？如果B存进来的币，存进来就锁仓了，不是随进随出，而是每天递减释放2%，只有在可用算力钱包的币才能提现</br></br>
+							2、分享:以小区持币总量按照相应算力匹配所得币量。按照小区实际锁仓币量计算小区业绩。</br>
+							&nbsp;&nbsp;(1) &nbsp;直推累计100币，小区业绩1000币以上，2‰/日 直推累计1000币，小区业绩5000币以上，2.5‰/日</br>
+							&nbsp;&nbsp;(2)&nbsp; 直推累计3000币，小区业绩10000币以上，3‰/日 直推累计5000币，小区业绩20000币以上，3.5‰/日</br>
+							&nbsp;&nbsp;(3)&nbsp; 直推累计10000币，小区业绩50000币以上，4‰/日</br></br>
+							3、管理奖，按照持币算力（锁仓的每日算力）和动态算力（直推10%+小区算力）总和计算。（周结）</br>
+							&nbsp;&nbsp;(1) &nbsp;自己持币1000枚以上，直接推荐2个1000币，可以拿第一代的1%</br>
+							&nbsp;&nbsp;(2) &nbsp;自己持币3000枚以上，直接推荐4个1000币，可以拿第一代的1%，第二代的0.5%</br>
+							&nbsp;&nbsp;(3) &nbsp;自己持币5000枚以上，直接推荐6个1000币，可以拿第一代的1%，第二代的0.5%，第三代的0.3%</br></br>
+							4、分红奖，按照小区锁仓持币总量计算。 小区业绩达到200万枚以上，拿0.5%业绩算力分红。</br>
+							&nbsp;&nbsp;分红奖每月结算一次，结算时只要小区业绩达到200万以上，就可以拿到小区总业绩0.5%的分红。结算后的业绩就归零，不够的业绩可以累积够200万又结算，也是月结
+							&nbsp;&nbsp;这个分红结算由我们手动执行结算，不设置自动结算 还有就是要设置账户冻结跟解冻功能
+							&nbsp;&nbsp;同时也设置几个账户，就是钱包的功能，这些钱包也就是存币，不参与释放跟算力 </br>
+							限制：</br>
+						    &nbsp;&nbsp;(1)&nbsp; 双区网络图显示，网络图上开通注册功能。</br>
+							&nbsp;&nbsp;(2) &nbsp;转账至别人存币生息平台，数量10枚起，无手续费。每个账户最高转币量设定为锁仓量。</br>
+							&nbsp;&nbsp;(3) &nbsp;转账至交易平台，数量100枚起，最高5000枚/天，提币日限额跟级别挂钩，手续费3%。</br>
+							&nbsp;&nbsp;(4) &nbsp;存币账户限定：1枚-10000枚。</br>
+							&nbsp;&nbsp;(5) &nbsp;每天23:30-02:00算力更新时间（实际就是系统升级时间段）。</br>
+							&nbsp;&nbsp;(6)&nbsp; 每日封顶5000枚。</br></br>
+
+							每日封顶不包括直接推荐的，直接推荐上不封顶（只有这一项不限），人数不限制，还有奖励10%的代币也不限制,</br>
+							分红不受日封顶限制，管理奖受限制，
+							还有一个很重要，就是锁仓钱包里面NFT不够100枚，不产生任何市场收益 。
+							</a>
+							</h3>
+						</div>
+                        
+                        <div class="hr-line-dashed"></div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div th:include="include :: footer"></div>
+</body>
+
+
+<!-- Mirrored from www.zi-han.net/theme/hplus/search_results.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:47 GMT -->
+</html>

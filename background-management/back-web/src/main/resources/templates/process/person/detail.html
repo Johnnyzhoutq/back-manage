@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org"
+	xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="white-bg">
+	<div class="wrapper wrapper-content animated fadeInRight ibox-content">
+	<form class="form-horizontal m-t" id="signupForm">
+	共享社区业绩 : 
+			<div class="form-group">
+				<label class="col-sm-3 control-label ">可用算力 : </label>
+				<div class="col-sm-6">
+					<input class="form-control" type="text" readonly="true" th:value="${leftData.keyongSuanli}"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label ">总算力 : </label>
+				<div class="col-sm-6">
+					<input class="form-control" type="text" readonly="true" th:value="${leftData.zongSuanli}"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label ">持有算力 : </label>
+				<div class="col-sm-6">
+					<input class="form-control" type="text" readonly="true" th:value="${leftData.chiyouSuanli}"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label ">用户昵称 : </label>
+				<div class="col-sm-6">
+					<input class="form-control" type="text" readonly="true" th:value="${leftData.userName}"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label ">星级水平 : </label>
+				<div class="col-sm-6">
+					<input class="form-control" type="text" readonly="true" th:value="${leftData.level}"/>
+				</div>
+			</div>
+		分享社区业绩 : 
+		   <div class="form-group">
+				<label class="col-sm-3 control-label ">可用算力 : </label>
+				<div class="col-sm-6">
+					<input class="form-control" type="text" readonly="true" th:value="${rightData.keyongSuanli}"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label ">总算力 : </label>
+				<div class="col-sm-6">
+					<input class="form-control" type="text" readonly="true" th:value="${rightData.zongSuanli}"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label ">持有算力 : </label>
+				<div class="col-sm-6">
+					<input class="form-control" type="text" readonly="true" th:value="${rightData.chiyouSuanli}"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label ">用户昵称 : </label>
+				<div class="col-sm-6">
+					<input class="form-control" type="text" readonly="true" th:value="${rightData.userName}"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label ">星级水平 : </label>
+				<div class="col-sm-6">
+					<input class="form-control" type="text" readonly="true" th:value="${rightData.level}"/>
+				</div>
+			</div>
+	</form>
+    </div>
+    <div th:include="include :: footer"></div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org"
+	xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<link href="/ruoyi/css/RuoYi.css" th:href="@{/ruoyi/css/RuoYi.css}" rel="stylesheet"/>
+<link href="/ajax/libs/jquery-layout/jquery.layout-latest.css" th:href="@{/ajax/libs/jquery-layout/jquery.layout-latest.css}" rel="stylesheet"/>
+<link href="/ajax/libs/jquery-ztree/3.5/css/metro/zTreeStyle.css" th:href="@{/ajax/libs/jquery-ztree/3.5/css/metro/zTreeStyle.css}" rel="stylesheet"/>
+<body class="white-bg">
+
+	<div class="wrapper wrapper-content ui-layout-center">
+        <input type="hidden" id="deptId">
+        <input type="hidden" id="parentId">
+		<table class="bootstrap-table" data-mobile-responsive="true" 
+			   data-sort-name="create_time" data-sort-order="desc">
+		</table>
+	</div>
+	<div th:include="include :: footer"></div>
+	<script src="/ruoyi/process/person/person.js" th:src="@{/ruoyi/process/person/person.js}"></script>
+	<script src="/ajax/libs/jquery-layout/jquery.layout-latest.js" th:src="@{/ajax/libs/jquery-layout/jquery.layout-latest.js}"></script>
+	<!-- <script src="/ajax/libs/jquery-ztree/3.5/js/jquery.ztree.all-3.5.js" th:src="@{/ajax/libs/jquery-ztree/3.5/js/jquery.ztree.all-3.5.js}"></script> -->
+	<script th:inline="javascript">
+		var listFlag = [[${@permissionService.hasPermi('system:dict:list')}]];
+		var logFlag = [[${@permissionService.hasPermi('monitor:operlog:detail')}]];
+	</script>
+</body>
+</html>
